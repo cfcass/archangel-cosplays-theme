@@ -1,0 +1,54 @@
+pages:
+  - home:
+      title: "Home"
+      path: "/"
+      notes: "Hero/intro, main calls to action, featured gallery" 
+  - about:
+      title: "About"
+      path: "/about"
+  - gallery:
+      title: "Cosplay Gallery"
+      path: "/gallery"
+  - commissions:
+      title: "Commissions"
+      path: "/commissions"
+  - contact:
+      title: "Contact"
+      path: "/contact"
+  - blog:
+      title: "Blog/News"
+      path: "/blog"
+
+colors:
+  primary: "#REPLACE_WITH_HEX" # Accent color used for buttons/links
+  background: "#FFFFFF"       # Page background
+  text: "#222222"             # Primary text color
+  muted: "#666666"            # Secondary text
+
+fonts:
+  headings: "REPLACE_WITH_FONT_NAME" # e.g., Montserrat
+  body: "REPLACE_WITH_FONT_NAME"     # e.g., Open Sans
+  notes: "If a commercial font is in use, include licensing details. For Google Fonts include the family query string."
+
+images:
+  hero:
+    usage: "Homepage hero/banner"
+    source_url: null
+    filename: null
+    license: "unknown"
+    notes: "High-resolution photo used on the homepage top. Use original aspect ratio if possible."
+  gallery: [] # populate with items like {source_url, filename, caption, usage}
+  profile:
+    usage: "About page headshot/profile"
+    source_url: null
+    filename: null
+
+interactive_elements:
+  - hero_slider: true
+  - gallery_lightbox: true
+  - contact_form: true
+  - social_links: true
+
+notes:
+  - "I could not automatically fetch image URLs and CSS values from the Wix site in this environment. Use a browser to right-click images -> "Copy image address" to get Wix-hosted image URLs (often starting with https://static.wixstatic.com/media/...)."
+  - "Replace the placeholders above with actual values or provide the asset files and I will add them to the repo."
