@@ -1,12 +1,39 @@
 /* Base variables and starter rules for the recreated site
+ * This file now references Wix-hosted fonts for local/staging preview (Option A).
  * Copy or import these rules into your theme's main stylesheet. These are intentionally minimal.
  */
 :root{
-  --color-primary: #REPLACE_WITH_HEX;
-  --color-bg: #ffffff;
-  --color-text: #222222;
-  --font-heading: 'REPLACE_WITH_FONT', sans-serif;
-  --font-body: 'REPLACE_WITH_FONT', sans-serif;
+  --color-primary: #116DFF;
+  --color-primary-2: #166AEA;
+  --color-accent: #FFDEFD;
+  --color-bg: #FFFFFF;
+  --color-text: #20303C;
+  --color-muted: #8D8D8D;
+  --font-heading: 'Madefor Text', 'Proxima N', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: 'Proxima N', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Load Wix-hosted fonts (staging/local preview). Ensure licensing before production use. */
+@font-face{
+  font-family: 'Madefor Text';
+  src: url('https://static.parastorage.com/fonts/v2/19247d19-0454-4de8-b907-b818135794bd/madefor-text.var.original.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Madefor Text';
+  src: url('https://static.parastorage.com/fonts/v2/6d5055c2-7d2e-47e7-ba22-fb81f960dffb/v1/madefor-text-mediumbold.woff2') format('woff2');
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face{
+  font-family: 'Proxima N';
+  src: url('https://static.parastorage.com/fonts/v2/c24fcada-6239-48bc-8b88-9288338191c9/v1/proxima-n-w01-reg.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 body{
@@ -28,9 +55,14 @@ body{
   background-position:center;
   padding: 6rem 0;
   text-align:center;
+  color: #fff; /* hero text shown over image */
 }
 
 .front-hero .hero-title{font-family:var(--font-heading);font-size:48px;margin:0 0 1rem}
-.front-hero .hero-sub{font-size:18px;color:var(--color-text)}
+.front-hero .hero-sub{font-size:18px;color:var(--color-accent)}
 
 .container{max-width:1100px;margin:0 auto;padding:0 1rem}
+
+.btn.primary{background:var(--color-primary);color:#fff;padding:0.75rem 1.25rem;border-radius:4px;text-decoration:none;display:inline-block}
+
+.featured-gallery{padding:3rem 0}

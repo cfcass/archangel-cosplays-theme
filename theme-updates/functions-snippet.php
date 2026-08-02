@@ -1,7 +1,9 @@
 <?php
 /**
  * Functions snippet: copy the contents of this file into your theme's functions.php
- * or include it and adapt to your project. It registers menus, enqueues styles, and sets theme supports.
+ * or include it and adapt to your project. It registers menus, enqueues styles/scripts, and sets theme supports.
+ * Note: For staging/local preview we reference Wix-hosted fonts via CSS @font-face. For production, verify licensing or
+ * replace fonts with licensed/Google fonts.
  */
 
 // Theme supports and menus
@@ -22,9 +24,12 @@ function archangel_enqueue_assets() {
     // Base stylesheet
     wp_enqueue_style( 'archangel-style', get_stylesheet_directory_uri() . '/style.css', array(), filemtime( get_stylesheet_directory() . '/style.css' ) );
 
-    // Optional: enqueue Google Fonts (replace with real families)
+    // NOTE: Wix-hosted fonts are referenced via @font-face in theme-updates/style/screen.css for preview.
+    // If you prefer to enqueue Google Fonts instead, uncomment and modify the block below.
+    /*
     $fonts = 'family=Montserrat:300,400,700|Open+Sans:300,400,700&display=swap';
     wp_enqueue_style( 'archangel-google-fonts', 'https://fonts.googleapis.com/css2?' . $fonts, array(), null );
+    */
 
     // Elementor and WPForms will enqueue their own assets when active
 }
