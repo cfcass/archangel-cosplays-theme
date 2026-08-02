@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  # WordPress container
+  wordpress:
+    build: .
+    container_name: archangel-cosplays-wordpress
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_TABLE_PREFIX: wp_
+    volumes:
+      - ./:/var/www/html/wp-content/themes/archangel-cosplays/
+      - wordpress_data:/var/www/html
+    depends_on:
+      - db
+    networks:
+      - archangel-network
+
+  # MySQL database container
+  db:
+    image: mysql:8.0
+    container_name: archangel-cosplays-db
+    environment:
+      MYSQL_DATABASE: wordpress
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - archangel-network
+
+  # phpMyAdmin for database management
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: archangel-cosplays-phpmyadmin
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: wordpress
+      PMA_PASSWORD: wordpress
+    depends_on:
+      - db
+    networks:
+      - archangel-network
+
+volumes:
+  wordpress_data:
+  db_data:
+
+networks:
+  archangel-network:
+    driver: bridge
