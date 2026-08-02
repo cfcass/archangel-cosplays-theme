@@ -1,0 +1,98 @@
+pages:
+  - home:
+      title: "Home"
+      path: "/"
+      notes: "Hero/intro, main calls to action, featured gallery"
+  - about:
+      title: "About"
+      path: "/about"
+  - gallery:
+      title: "Cosplay Gallery"
+      path: "/gallery"
+  - commissions:
+      title: "Commissions"
+      path: "/commissions"
+  - contact:
+      title: "Contact"
+      path: "/contact"
+  - blog:
+      title: "Blog/News"
+      path: "/blog"
+
+# Extracted from wix-assets.yaml provided by user
+colors:
+  primary: "#116DFF" # detected prominent accent (blue)
+  background: "#FFFFFF"
+  text: "#20303C" # dark slate found in palette
+  muted: "#8D8D8D"
+  palette:
+    - "#116DFF"
+    - "#166AEA"
+    - "#80B1FF"
+    - "#B49AD7"
+    - "#C7B2F0"
+    - "#DFE6E9"
+    - "#E2E2E2"
+    - "#FFFFFF"
+    - "#FFDEFD"
+    - "#FF8C00"
+
+fonts:
+  primary_families:
+    - "Madefor-Text" # site uses Wix "Madefor" display family for headings
+    - "Helvetica Neue / Helvetica / Arial" # fallback stack observed
+    - "Proxima Nova (proxima-n)" # present as proxima-n references
+    - "VAG Rounded" # used for rounded headings/icons
+  font_files: |
+    # Wix-hosted font file URLs discovered (woff/woff2/ttf)
+    - https://static.parastorage.com/fonts/v2/19247d19-0454-4de8-b907-b818135794bd/madefor-text.var.original.woff2
+    - https://static.parastorage.com/services/santa-resources/resources/viewer/user-site-fonts/fonts/WixMadefor/v3/WixMadeforTextVF_W_Wght.woff2
+    - https://static.parastorage.com/fonts/v2/6d5055c2-7d2e-47e7-ba22-fb81f960dffb/v1/madefor-text-mediumbold.woff2
+    - https://static.parastorage.com/fonts/v2/c24fcada-6239-48bc-8b88-9288338191c9/v1/proxima-n-w01-reg.woff2
+    - https://static.parastorage.com/fonts/v2/bec5982d-ea49-4f1e-b6f3-f0e8e953a6bf/v1/vag-rounded-next.latin.woff2
+    - Multiple Helvetica-family font files (various woff/ttf/eot) served from static.parastorage.com
+  notes: |
+    - "Madefor-Text" appears to be the display/headline family used on the Wix site (Wix-hosted). This font may be proprietary and delivered via Wix. To use it on WordPress you can either:
+      - Host the font files yourself if you have the license and upload them to the theme (recommended license checks).
+      - Replace with a Pixel-similar Google Font for prototyping (e.g., Montserrat for headings) or use the Wix font files for local staging only.
+    - Helvetica / Proxima / VAG references indicate a layered stack; fallback to system fonts is safe.
+
+images:
+  hero:
+    usage: "Homepage hero/banner (high-res)">
+    source_urls:
+      - https://static.wixstatic.com/media/2165a6_65b626ec208343fab474185232f15fb3~mv2.jpg/v1/fill/w_926,h_540,al_c,q_85,enc_avif,quality_auto/2165a6_65b626ec208343fab474185232f15fb3~mv2.jpg
+    filename: null
+    license: "unknown"
+    notes: "Download the original from the URL and upload to WP Media Library."
+  gallery:
+    usage: "Gallery images / thumbnails"
+    items:
+      - source_url: https://static.wixstatic.com/media/2165a6_4fe86e77e84048b3a70a7c9a2381efee~mv2.png/v1/crop/x_0,y_104,w_882,h_900/fill/w_128,h_131,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2165a6_4fe86e77e84048b3a70a7c9a2381efee~mv2.png
+      - source_url: https://static.wixstatic.com/media/2165a6_4fe86e77e84048b3a70a7c9a2381efee~mv2.png/v1/crop/x_706,y_940,w_914,h_1008/fill/w_254,h_280,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2165a6_4fe86e77e84048b3a70a7c9a2381efee~mv2.png
+      - source_url: https://static.wixstatic.com/media/2165a6_b31e7e11b4e643d9a985061df54b7961~mv2.png/v1/crop/x_720,y_108,w_821,h_868/fill/w_121,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2165a6_b31e7e11b4e643d9a985061df54b7961~mv2.png
+      - source_url: https://static.wixstatic.com/media/2165a6_ca9e5e255cb3488489ee431d9d9c8c4b~mv2.png/v1/crop/x_0,y_972,w_907,h_990/fill/w_252,h_275,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2165a6_ca9e5e255cb3488489ee431d9d9c8c4b~mv2.png
+      - source_url: https://static.wixstatic.com/media/2165a6_cb7d765c3d444e3eb1f4a86901daa8e1~mv2.png/v1/fill/w_244,h_164,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/toppng_edited.png
+      - source_url: https://static.wixstatic.com/media/2165a6_65b626ec208343fab474185232f15fb3~mv2.jpg/v1/fill/w_926,h_540,al_c,q_85,enc_avif,quality_auto/2165a6_65b626ec208343fab474185232f15fb3~mv2.jpg
+  profile:
+    usage: "About page headshot/profile"
+    source_urls:
+      - https://static.wixstatic.com/media/2165a6_e7e6a4d0bc904897929c1eed40f49103~mv2.png/v1/crop/x_108,y_1447,w_731,h_713/fill/w_71,h_71,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2165a6_e7e6a4d0bc904897929c1eed40f49103~mv2.png
+    filename: null
+    license: "unknown"
+
+interactive_elements:
+  hero_slider: true
+  gallery_lightbox: true
+  contact_form: true
+  social_links: true
+  notes: "Wix uses data-* attributes and custom viewers for galleries; recreate with Elementor gallery + lightbox or a gallery plugin (e.g., FooGallery, Envira, or Elementor Pro gallery)."
+
+forms:
+  contact_form_present: true
+  detected_forms: []
+
+notes:
+  - "This manifest was auto-populated from the wix-assets.yaml you provided. Images are referenced by their Wix-hosted URLs (option B)."
+  - "I did not commit binary images to the repo per your instruction (Option B). To preview locally, download the listed images and import them into your WP media library or provide them and I will add them to the repo in a separate commit if you change your mind."
+  - "Font files are hosted by Wix; licensing/redistribution may be restricted. For prototyping you can reference these files locally, but for production you should ensure proper licensing or choose an alternative Google/Adobe font."
