@@ -1,0 +1,313 @@
+/*
+Theme Name:       Archangel Cosplays
+Theme URI:        https://github.com/cfcass/archangel-cosplays-theme
+Author:           Erin Leigh
+Author URI:       https://erinleigh0528.wixsite.com/archangelcosplays
+Description:      A custom WordPress theme for Archangel Cosplays portfolio website
+Version:          1.0.0
+Requires at least: 5.9
+Requires PHP:     7.4
+License:          GPL v2 or later
+License URI:      https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:      archangel-cosplays
+Domain Path:      /languages
+
+This theme is designed to showcase cosplay portfolios with a responsive,
+elegant design optimized for displaying project galleries and client work.
+*/
+
+/* ============================================================================
+   Global Styles
+   ========================================================================== */
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2d1b3d;
+  --color-secondary: #a855f7;
+  --color-accent: #ec4899;
+  
+  /* Neutrals */
+  --color-white: #ffffff;
+  --color-light-gray: #f9fafb;
+  --color-gray: #6b7280;
+  --color-dark-gray: #1f2937;
+  --color-black: #000000;
+  
+  /* Functional Colors */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  
+  /* Typography */
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-secondary: Georgia, 'Times New Roman', serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+  
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-dark-gray);
+  background-color: var(--color-white);
+}
+
+/* ============================================================================
+   Typography
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.875rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+a {
+  color: var(--color-secondary);
+  text-decoration: none;
+  transition: color var(--transition-normal);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+/* ============================================================================
+   Buttons
+   ========================================================================== */
+
+button,
+.button,
+input[type="button"],
+input[type="submit"] {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  text-decoration: none;
+}
+
+button:hover,
+.button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.4);
+}
+
+button:active,
+.button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
+  transform: translateY(0);
+}
+
+button.secondary,
+.button.secondary {
+  background-color: transparent;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+button.secondary:hover,
+.button.secondary:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* ============================================================================
+   Forms
+   ========================================================================== */
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid #d1d5db;
+  border-radius: var(--radius-md);
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: border-color var(--transition-normal);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(168, 85, 247, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* ============================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -var(--spacing-md);
+}
+
+.col {
+  padding: var(--spacing-md);
+  flex: 1 1 auto;
+}
+
+.col-full {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.col-half {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.col-third {
+  flex-basis: 33.333%;
+  max-width: 33.333%;
+}
+
+.col-quarter {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+/* ============================================================================
+   Images
+   ========================================================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.featured-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+/* ============================================================================
+   Responsive Design
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .col-half,
+  .col-third,
+  .col-quarter {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+}
